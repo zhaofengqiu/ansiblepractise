@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>03使用ansible-galaxy初始化Role · ansible newer</title>
+        <title>01playbook配置文件 · ansible newer</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,8 +77,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="02loop循环.html" />
     
-    <link rel="prev" href="02role文件夹下的子目录介绍.html" />
     
 
     </head>
@@ -204,9 +204,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../play-book/01playbook配置文件.html">
+        <li class="chapter active" data-level="1.3.1" data-path="01playbook配置文件.html">
             
-                <a href="../play-book/01playbook配置文件.html">
+                <a href="01playbook配置文件.html">
             
                     
                         <b>1.3.1.</b>
@@ -219,9 +219,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../play-book/02loop循环.html">
+        <li class="chapter " data-level="1.3.2" data-path="02loop循环.html">
             
-                <a href="../play-book/02loop循环.html">
+                <a href="02loop循环.html">
             
                     
                         <b>1.3.2.</b>
@@ -234,9 +234,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../play-book/03条件语句.html">
+        <li class="chapter " data-level="1.3.3" data-path="03条件语句.html">
             
-                <a href="../play-book/03条件语句.html">
+                <a href="03条件语句.html">
             
                     
                         <b>1.3.3.</b>
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../play-book/04set_fact变量.html">
+        <li class="chapter " data-level="1.3.4" data-path="04set_fact变量.html">
             
-                <a href="../play-book/04set_fact变量.html">
+                <a href="04set_fact变量.html">
             
                     
                         <b>1.3.4.</b>
@@ -264,9 +264,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../play-book/05block异常捕获.html">
+        <li class="chapter " data-level="1.3.5" data-path="05block异常捕获.html">
             
-                <a href="../play-book/05block异常捕获.html">
+                <a href="05block异常捕获.html">
             
                     
                         <b>1.3.5.</b>
@@ -774,9 +774,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="01role的基本使用.html">
+        <li class="chapter " data-level="1.8.1" data-path="../Role/01role的基本使用.html">
             
-                <a href="01role的基本使用.html">
+                <a href="../Role/01role的基本使用.html">
             
                     
                         <b>1.8.1.</b>
@@ -789,9 +789,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="02role文件夹下的子目录介绍.html">
+        <li class="chapter " data-level="1.8.2" data-path="../Role/02role文件夹下的子目录介绍.html">
             
-                <a href="02role文件夹下的子目录介绍.html">
+                <a href="../Role/02role文件夹下的子目录介绍.html">
             
                     
                         <b>1.8.2.</b>
@@ -804,9 +804,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.3" data-path="03使用ansible-galaxy初始化Role.html">
+        <li class="chapter " data-level="1.8.3" data-path="../Role/03使用ansible-galaxy初始化Role.html">
             
-                <a href="03使用ansible-galaxy初始化Role.html">
+                <a href="../Role/03使用ansible-galaxy初始化Role.html">
             
                     
                         <b>1.8.3.</b>
@@ -1040,7 +1040,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >03使用ansible-galaxy初始化Role</a>
+        <a href=".." >01playbook配置文件</a>
     </h1>
 </div>
 
@@ -1055,52 +1055,194 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x662F;&#x4ECE;</p>
-<p><code>ansible2.9</code>&#x7248;&#x672C;&#x5F00;&#x59CB;&#x6709;&#x7684;&#x3002;</p>
-<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ansible-galaxy&#x53BB;&#x81EA;&#x52A8;&#x7BA1;&#x7406;role&#x6A21;&#x5757;</p>
-<h2 id="&#x521D;&#x59CB;&#x5316;role">&#x521D;&#x59CB;&#x5316;role</h2>
-<pre><code># &#x8FDB;&#x5165;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x521D;&#x59CB;&#x5316;
-cd roles
-    ansible-galaxy role init  ansible_galaxy_demo
-</code></pre><p><img src="../img/image-20201026110257429.png" alt="image-20201026110257429"></p>
-<p>]</p>
-<h2 id="&#x4ECE;github&#x4E0B;&#x8F7D;role">&#x4ECE;github&#x4E0B;&#x8F7D;role</h2>
-<p>&#x6A21;&#x4EFF;python&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;requirement.txt&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;requirement.yml&#x3002;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x8BFE;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;role.</p>
-<pre><code class="lang-yaml"><span class="hljs-attr">roles:</span>
-<span class="hljs-attr">  -  src:</span> https://github.com/xiaopeng163/ansible-galaxy-demo
-<span class="hljs-attr">     scm:</span>git
-<span class="hljs-attr">     version:</span> master
-</code></pre>
-<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;</p>
-<pre><code class="lang-powershell">ansible install -r requirements.yml
-</code></pre>
-<p><img src="../img/image-20201026111553999.png" alt="image-20201026111553999"></p>
-<p>&#x8FD9;&#x4E2A;roles&#x4F1A;&#x50CF;python&#x4E00;&#x6837;&#xFF0C;&#x5C06;role&#x5B89;&#x88C5;&#x5230;ansible&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x3002;&#x4ECE;&#x8FD9;&#x91CC;&#x770B;&#xFF0C;role&#x5C31;&#x5F88;&#x5411;python&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;role&#x4E5F;&#x53EF;&#x4EE5;&#x5220;&#x9664;role&#x3002;</p>
-<h2 id="galaxy&#x5E93;">galaxy&#x5E93;</h2>
-<p>ansible&#x4E5F;&#x50CF;python&#x4E00;&#x6837;&#x6709;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x7684;role&#x5E93;&#x3002;</p>
-<p><a href="https://galaxy.ansible.com/home" target="_blank">https://galaxy.ansible.com/home</a></p>
-<h3 id="&#x5982;&#x4F55;&#x4ECE;&#x8FD9;&#x4E2A;&#x5E93;&#x4E2D;&#x5B89;&#x88C5;role">&#x5982;&#x4F55;&#x4ECE;&#x8FD9;&#x4E2A;&#x5E93;&#x4E2D;&#x5B89;&#x88C5;role</h3>
-<pre><code class="lang-bash">ansible-galaxy install xiaopeng163.ansible_galaxy_demmo
-</code></pre>
+                                <p>play book&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x4F7F;&#x7528;yaml&#x6587;&#x4EF6;&#x5199;&#x7684;</p>
 <ul>
-<li>xiaopeng163&#x662F;namespace&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x7A7A;&#x95F4;</li>
-<li>ansible_galaxy_demmo&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7684;role&#x6A21;&#x5757;</li>
-<li>&#x901A;&#x8FC7;&#x4EE5;&#x4E0A;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x7684;&#x5B9A;&#x4F4D;&#x5230;&#x4E00;&#x4E2A;role&#x6A21;&#x5757;&#x3002;</li>
+<li><p>&#x4E00;&#x4E2A;paly book&#x57FA;&#x672C;&#x5355;&#x4F4D;&#x662F;hosts&#x3002;hosts&#x4E0B;&#x9762;&#x6709;name&#x4E0E;task&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;</p>
+<ul>
+<li>name &#x6307;&#x7684;&#x662F;&#x8FD9;&#x4E2A;hosts&#x662F;&#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7528;&#x7684;</li>
+<li>tasks&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x5C0F;&#x7EC4;&#x6210;&#x3002;</li>
 </ul>
-<h3 id="&#x5F15;&#x7528;&#x4ECE;galaxy&#x5E93;&#x7684;role">&#x5F15;&#x7528;&#x4ECE;galaxy&#x5E93;&#x7684;role</h3>
-<p>&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5F15;&#x7528;&#x8FD9;&#x4E2A;role&#xFF0C;&#x5982;&#x4F55;&#x5F15;&#x7528;&#xFF0C;&#x4E0E;&#x524D;&#x9762;&#x65E0;&#x533A;&#x522B;&#xFF0C;&#x53EA;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;name&#x5373;&#x53EF;</p>
-<pre><code class="lang-yaml"><span class="hljs-attr">tasks:</span>
-<span class="hljs-attr">  -  name:</span> xiaopeng163.ansible_galaxy_demmo
+</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x6709;&#x4E00;&#x4E2A;demo&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x662F;&#x4F7F;&#x7528;playbook&#x53BB;&#x6267;&#x884C;ping&#x547D;&#x4EE4;</p>
+<pre><code>hosts: web1
+name: play-test
+tasks: 
+ - name: check host connection
+ - ping:
+</code></pre><p>&#x6548;&#x679C;</p>
+<p><img src="../img/image-20201023102210858.png" alt="image-20201023102210858"></p>
+<h2 id="play-book&#x5355;&#x4F4D;">play book&#x5355;&#x4F4D;</h2>
+<p>&#x5E38;&#x2F64;&#x5C5E;&#x6027; </p>
+<ul>
+<li><p>name &#x5C5E;&#x6027;&#x6BCF;&#x4E2A;play&#x7684;&#x540D;&#x5B57; hosts &#x5C5E;&#x6027;, &#x6BCF;&#x4E2A;play &#x6D89;&#x53CA;&#x7684;&#x88AB;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x540C;ad-hoc &#x4E2D;&#x7684;&#x8D44; &#x4EA7;&#x9009;&#x62E9;&#x5668; </p>
+</li>
+<li><p>tasks &#x5C5E;&#x6027;, &#x6BCF;&#x4E2A;play &#x4E2D;&#x5177;&#x4F53;&#x8981;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4EE5;&#x5217;&#x8868;&#x7684;&#x5F62;&#x5F0F;&#x8868;&#x8FBE;</p>
+</li>
+<li>become &#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x63D0;&#x6743;&#xFF0C;&#x5219;&#x52A0;&#x4E0A;become &#x76F8;&#x5173;&#x5C5E;&#x6027; </li>
+<li>become_user &#x5C5E;&#x6027;, &#x82E5;&#x63D0;&#x6743;&#x7684;&#x8BDD;&#xFF0C;&#x63D0;&#x6743;&#x5230;&#x54EA;&#x4E2A;&#x2F64;&#x6237;&#x4E0A; </li>
+<li>remote_user&#x5C5E;&#x6027;&#xFF0C;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x5230;&#x8FDC;&#x7A0B;&#x8282;&#x70B9;&#x7684;&#x2F64;&#x6237;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x8FDC;&#x7A0B; &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6267;&#x2F8F;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x7684;&#x2F64;&#x6237;&#x3002;&#x82E5;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x2F64;&#x5F53;&#x524D;&#x6267; &#x2F8F; ansible Playbook &#x7684;&#x2F64;&#x6237;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;play book&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;play&#x9879;&#x76EE;&#xFF0C;&#x5982;&#x4E0B;,&#x662F;&#x4E00;&#x4E2A;play&#x9879;&#x76EE;&#xFF1A;</p>
+<pre><code>-  name: the first play example
+   hosts: webservers
+   remote_user: root
+   tasks:
+</code></pre><p>tasks&#x4E2D;&#x4EFB;&#x52A1;&#x7684;&#x591A;&#x79CD;&#x5199;&#x6CD5;</p>
+<pre><code>module_name: name=nginx enabled=true state=started
+# &#x591A;&#x2F8F;&#x7684;&#x5F62;&#x5F0F;:
+
+module_name: name=nginx
+         enabled=true
+         state=started
+# &#x591A;&#x2F8F;&#x5199;&#x6210;&#x5B57;&#x5178;&#x7684;&#x5F62;&#x5F0F;:
+
+name: nginx
+module_name:
+ enabled: true
+ state: started
+</code></pre><h2 id="play-book&#x7684;&#x6821;&#x9A8C;">play book&#x7684;&#x6821;&#x9A8C;</h2>
+<h3 id="&#x6821;&#x9A8C;">&#x6821;&#x9A8C;</h3>
+<p>&#x4E0B;&#x2FAF;&#x6821;&#x9A8C;&#x7684;&#x2F45;&#x6CD5;&#xFF0C;&#x53EA;&#x80FD;&#x6821;&#x9A8C;PlayBook&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x2F7D;&#x4E0D;&#x80FD;&#x6821;&#x9A8C;YAML &#x2F42;&#x4EF6;&#x662F;&#x5426;&#x8BED;&#x6CD5;&#x6B63;&#x786E;&#x3002;</p>
+<pre><code> ansible-playbook -i hosts myplaybook.yml --syntaxcheck
+</code></pre><p>&#x4F7F;&#x7528;&#x68C0;&#x67E5;yaml&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;playbook&#x8FDB;&#x884C;&#x68C0;&#x67E5;</p>
+<pre><code class="lang-python"> python -c <span class="hljs-string">&apos;import yaml,sys; print yaml.safe_load(sys.stdin)&apos;</span> &lt; myplaybook.yml
 </code></pre>
-<p>&#x8FD9;&#x91CC;&#x7684;role&#x540D;&#x79F0;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5B89;&#x88C5;role&#x65F6;&#x5019;&#x8F93;&#x5165;&#x7684;&#x3002;</p>
-<h2 id="requirementyml">requirement.yml</h2>
-<p>&#x5982;&#x679C;&#x4ECE;&#x5E93;&#x4E2D;&#x5B89;&#x88C5;role&#xFF0C;&#x90A3;&#x4E48;requirement.yml&#x600E;&#x4E48;&#x5199;,&#x5982;&#x4E0B;</p>
-<pre><code class="lang-yaml"><span class="hljs-attr">roles:</span>
-<span class="hljs-attr">  -  src:</span> xiaopeng163.ansible_galaxy_demo
-<span class="hljs-attr">     version:</span> master
+<h3 id="&#x5355;&#x6B65;&#x8C03;&#x8BD5;">&#x5355;&#x6B65;&#x8C03;&#x8BD5;</h3>
+<p>&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x4E2A;task</p>
+<pre><code class="lang-shell">// &#x6267;&#x2F8F;Task&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x2F3F;&#x52A8;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x5F80;&#x4E0B;&#x6267;&#x2F8F;&#x3002;
+ansible-playbook -i hosts myplaybook.yml --step
 </code></pre>
+<h3 id="&#x6A21;&#x62DF;&#x6267;&#x884C;">&#x6A21;&#x62DF;&#x6267;&#x884C;</h3>
+<p>&#x68C0;&#x6D4B;&#x81EA;&#x5DF1;&#x7684;playbook&#x6709;&#x65E0;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x6267;&#x884C;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x65B9;&#x5F0F;</p>
+<pre><code>ansible-playbook -i hosts myplaybook.yml -C
+</code></pre><p><code>-C</code> &#x5176;&#x5B9E;&#x5E94;&#x8BE5;&#x5C31;&#x662F;<code>--checkout</code></p>
+<h3 id="&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x67E5;&#x770B;">&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x67E5;&#x770B;</h3>
+<pre><code>ansible-playbook -i hosts myplaybook.yml -VVV
+</code></pre><p>v&#x8D8A;&#x591A;&#x8D8A;&#x8BE6;&#x7EC6;&#xFF0C;&#x652F;&#x6301;&#x5230;5&#x4E2A;v&#x3002;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x90FD;&#x56DE;&#x8F93;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x6709;&#x4E2A;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#x5148;&#x9650;&#x5236;&#x7EC4;&#x518D;&#x589E;&#x52A0;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5230;&#x62A5;&#x9519;</p>
+<pre><code class="lang-bash"> ansible-playbook -i hosts checkhosts.yml --limit dbservers -vvv
+</code></pre>
+<h1 id="variables">Variables</h1>
+<p>&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</p>
+<pre><code>- name: Hello world
+  hosts: web1
+  vars:
+   greeting: &quot;hello from vars&quot;
+  tasks:
+   - name: hello world task
+     debug: 
+       msg: &quot;&quot;
+</code></pre><p>&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5728;tasks&#x4E2D;&#x88AB;&#x5F15;&#x7528;&#x3002;</p>
+<p><img src="../img/image-20201023111030159.png" alt="image-20201023111030159"></p>
+<p>&#x53D8;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5B57;&#x5178;&#x548C;&#x6570;&#x7EC4;</p>
+<pre><code>- name: Hello world
+  hosts: web1
+  vars:
+   greeting: &quot;hello from vars&quot;
+   demo:
+    a:
+     - a: 1
+     - b: 2
+  tasks:
+   - name: hello world task
+     debug: 
+       msg: &quot;&quot;
+</code></pre><p><img src="../img/image-20201023111347020.png" alt="image-20201023111347020"></p>
+<p>&#x53D8;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5916;&#x90E8;&#x8FDB;&#x884C;&#x5BFC;&#x5165;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- name:</span> Hello world
+<span class="hljs-attr">  hosts:</span> web1
+<span class="hljs-attr">  vars_files:</span> 
+<span class="hljs-bullet">   -</span> vars_file/vars/demo.yaml
+<span class="hljs-attr">   vars:</span>
+<span class="hljs-attr">    greeting:</span> <span class="hljs-string">&quot;hello from vars&quot;</span>
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">   - name:</span> hello world task
+<span class="hljs-attr">     debug:</span> 
+<span class="hljs-attr">       msg:</span> <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5B50;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x53D8;&#x91CF;</p>
+<p>&#x53D8;&#x91CF;&#x4F18;&#x5148;&#x7EA7;&#xFF1A;</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x540E;&#x9762;&#x8986;&#x76D6;&#x524D;&#x9762;&#x3002;</p>
+<p>&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;</p>
+<ul>
+<li>&#x53D8;&#x91CF;&#x90FD;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x524D;&#x9762;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x540E;&#x9762;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x76F8;&#x540C;&#x7684;&#x53D8;&#x91CF;&#x8986;&#x76D6;</li>
+<li>&#x5916;&#x90E8;&#x5F15;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x81EA;&#x5DF1;&#x6587;&#x4EF6;&#x4E2D;&#x540E;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x8986;&#x76D6;&#x6389;&#x3002;</li>
+</ul>
+<h1 id="group&#x53D8;&#x91CF;&#x4E0E;host&#x53D8;&#x91CF;">group&#x53D8;&#x91CF;&#x4E0E;host&#x53D8;&#x91CF;</h1>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x53D8;&#x91CF;&#x6307;&#x7684;&#x662F;&#x4E3B;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x4E3B;&#x673A;&#x540D;&#x3001;&#x4E3B;&#x673A;&#x5BC6;&#x7801;&#x3001;&#x4E3B;&#x673A;&#x7AEF;&#x53E3;&#x7B49;&#x7B49;&#x3002;&#x662F;&#x4E3B;&#x673A;&#x7EA7;&#x522B;&#x7684;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x548C;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x662F;host&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x6709;&#x591A;&#x5C11;&#x4E3B;&#x673A;&#xFF0C;&#x5C31;&#x548C;<code>/etc/passwd</code>&#x4E00;&#x6837;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x800C;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5206;&#x522B;&#x662F;group&#x6587;&#x4EF6;&#x5939;&#x548C;host&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x6E90;<code>investory</code>&#x6587;&#x4EF6;</p>
+<p>&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>[web]
+ansible-node1 ansible-connection=ssh ansible_user=root 
+
+[db]
+host1 ansible-connection=ssh ansible_user=root http_port=443
+ansible-node3 ansible-connection=ssh ansible_user=root
+ansible-node4 ansible-connection=ssh ansible_user=root
+</code></pre><p>&#x8FDB;&#x884C;&#x5212;&#x5206;</p>
+<p><img src="../img/image-20201023150624000.png" alt="image-20201023150624000"></p>
+<p>&#x5176;&#x4E2D;host&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4E3B;&#x673A;&#x540D;</p>
+<pre><code>[all]
+ansible-node1 
+ansible-node2
+ansible-node3
+ansible-node4
+host1
+</code></pre><p>group_vars&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5206;&#x7EC4;&#x53D8;&#x91CF;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x6587;&#x4E2D;&#x7684;db.yaml.</p>
+<pre><code>ansible-connection: ssh 
+ansible_user: root
+</code></pre><p>host_vars&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4EE3;&#x8868;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x53F0;&#x8282;&#x70B9;&#x673A;&#x7684;&#x5355;&#x72EC;&#x914D;&#x7F6E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5355;&#x72EC;&#x914D;&#x7F6E;&#x5199;&#x5165;&#x5176;&#x4E2D;</p>
+<pre><code>http_port
+</code></pre><h1 id="ansiblecfg">ansible.cfg</h1>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;investory&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5199;&#x5165;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x7528;&#x53C2;&#x6570;<code>i</code>&#x53BB;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E86;&#x3002;</p>
+<p>&#x6709;&#x4E09;&#x4E2A;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x5BFB;&#x627E;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4ECE;&#x524D;&#x5230;&#x540E;i</p>
+<ul>
+<li>&#x9996;&#x5148;&#x4F1A;&#x5728;&#x6267;&#x884C;ansible&#x7684;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x5BFB;&#x627E;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>&#x4F1A;&#x67E5;&#x627E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x7684;<code>ANSIBLE_CONFIG</code>&#x67E5;&#x627E;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x6700;&#x540E;&#x624D;&#x4F1A;&#x4F7F;&#x7528;<code>/etc/ansible</code>&#x4E2D;&#x7684;ansible.cfg&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+<p>ansible&#x9002;&#x5408;&#x653E;&#x7684;&#x662F;ansible&#x7EA7;&#x522B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;private-key&#x7684;&#x76EE;&#x5F55;&#x548C;username&#x7B49;&#x3002;</p>
+<h1 id="&#x8FC7;&#x6EE4;&#x5668;">&#x8FC7;&#x6EE4;&#x5668;</h1>
+<h2 id="&#x9ED8;&#x8BA4;&#x8FC7;&#x6EE4;&#x5668;">&#x9ED8;&#x8BA4;&#x8FC7;&#x6EE4;&#x5668;</h2>
+<p>&#x4E3A;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x5185;&#x5BB9;&#x7684;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</p>
+<pre><code>&#xFF02;HOST&#xFF02;: &#xFF02;localhost&#xFF02;,
+</code></pre><p>&#x5982;&#x679C;&#x53D8;&#x91CF;database_host&#x5DF2;&#x88AB;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x4E48;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x503C;&#x3002;&#x6CA1;&#x88AB;&#x5B9A;&#x4E49;&#xFF0C;&#x5219;&#x4F1A;&#x8BBE;&#x7F6E;&#x6210;localhost&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;</p>
+<h2 id="&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x8FC7;&#x6EE4;&#x5668;">&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x8FC7;&#x6EE4;&#x5668;</h2>
+<p>basename&#x8FC7;&#x6EE4;&#x5668;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x4ECE;&#x5168;&#x8DEF;&#x5F84;&#x4E2D;&#x63D0;&#x53D6;&#x6587;&#x4EF6;&#x540D;&#x90E8;&#x5206;</p>
+<h2 id="&#x8FC7;&#x6EE4;&#x5668;&#x7F16;&#x5199;">&#x8FC7;&#x6EE4;&#x5668;&#x7F16;&#x5199;</h2>
+<p>TODO</p>
+<h1 id="lookup&#x6A21;&#x5757;">lookup&#x6A21;&#x5757;</h1>
+<p>&#x4E0E;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x88AB;&#x7684;jinj2&#x6A21;&#x677F;&#x6240;&#x8C03;&#x7528;</p>
+<p>&#x683C;&#x5F0F;&#x7EDF;&#x4E00;&#x90FD;&#x662F;</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130058398.png" alt="image-20201102130058398"></p>
+<h2 id="file">file</h2>
+<p>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x7684;&#x76F8;&#x5E94;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130333898.png" alt="image-20201102130333898"></p>
+<p>&#x5728;playbook&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;key_matrial&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x5E94;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5BC6;&#x94A5;&#x4FE1;&#x606F;</p>
+<h2 id="pipe">pipe</h2>
+<p>&#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#xFF0C;&#x83B7;&#x53D6;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x7ED3;&#x679C;</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130441530.png" alt="image-20201102130441530"></p>
+<h2 id="env">env</h2>
+<p>&#x83B7;&#x53D6;&#x5230;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130501227.png" alt="image-20201102130501227"></p>
+<h2 id="template">template</h2>
+<p>lookup&#x4F1A;&#x8BA9;&#x4F60;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;Jinja2&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x7684;&#x7ED3;&#x679C;.</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130141975.png" alt="image-20201102130141975">\</p>
+<h2 id="csvfile">csvfile</h2>
+<p>&#x83B7;&#x53D6;csv&#x4E2D;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;</p>
+<h2 id="dnstxt">dnstxt</h2>
+<p>&#x83B7;&#x53D6;&#x5BF9;&#x5E94;dns&#x7684;ip</p>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130227181.png" alt="image-20201102130227181"></p>
+<h2 id="rediskv">redis_kv</h2>
+<p><img src="../root/.config/Typora/typora-user-images/image-20201102130209463.png" alt="image-20201102130209463"></p>
+<h1 id="include">include</h1>
+<p>include &#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;&#x6574;&#x4E2A;&#x6587;&#x4EF6;</p>
+<p>&#x9759;&#x6001;&#x5F15;&#x7528;</p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; dsx2016.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-10-26 11:35:46
+2020-11-02 13:05:37
 </span></footer>
                                 
                                 </section>
@@ -1128,10 +1270,10 @@ cd roles
 
             
                 
-                <a href="02role文件夹下的子目录介绍.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 02role文件夹下的子目录介绍">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
+                <a href="02loop循环.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 02loop循环">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1140,7 +1282,7 @@ cd roles
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"03使用ansible-galaxy初始化Role","level":"1.8.3","depth":2,"next":{"title":"回调插件","level":"1.9","depth":1,"ref":"","articles":[{"title":"01回调插件的使用","level":"1.9.1","depth":2,"path":"回调插件/01回调插件的使用.md","ref":"回调插件/01回调插件的使用.md","articles":[]},{"title":"02日志回调插件源码解析","level":"1.9.2","depth":2,"path":"回调插件/02日志回调插件源码解析.md","ref":"回调插件/02日志回调插件源码解析.md","articles":[]},{"title":"Ces","level":"1.9.3","depth":2,"path":"回调插件/ces.md","ref":"回调插件/ces.md","articles":[]}]},"previous":{"title":"02role文件夹下的子目录介绍","level":"1.8.2","depth":2,"path":"Role/02role文件夹下的子目录介绍.md","ref":"Role/02role文件夹下的子目录介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","code","splitter","-lunr","-search","search-pro","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"qipaqiu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ansible newer","gitbook":"*"},"file":{"path":"Role/03使用ansible-galaxy初始化Role.md","mtime":"2020-10-26T03:35:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T05:05:45.602Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01playbook配置文件","level":"1.3.1","depth":2,"next":{"title":"02loop循环","level":"1.3.2","depth":2,"path":"play-book/02loop循环.md","ref":"play-book/02loop循环.md","articles":[]},"previous":{"title":"Play Book","level":"1.3","depth":1,"ref":"","articles":[{"title":"01playbook配置文件","level":"1.3.1","depth":2,"path":"play-book/01playbook配置文件.md","ref":"play-book/01playbook配置文件.md","articles":[]},{"title":"02loop循环","level":"1.3.2","depth":2,"path":"play-book/02loop循环.md","ref":"play-book/02loop循环.md","articles":[]},{"title":"03条件语句","level":"1.3.3","depth":2,"path":"play-book/03条件语句.md","ref":"play-book/03条件语句.md","articles":[]},{"title":"04set_fact变量","level":"1.3.4","depth":2,"path":"play-book/04set_fact变量.md","ref":"play-book/04set_fact变量.md","articles":[]},{"title":"05block异常捕获","level":"1.3.5","depth":2,"path":"play-book/05block异常捕获.md","ref":"play-book/05block异常捕获.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","code","splitter","-lunr","-search","search-pro","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"qipaqiu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ansible newer","gitbook":"*"},"file":{"path":"play-book/01playbook配置文件.md","mtime":"2020-11-02T05:05:37.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T05:05:45.602Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

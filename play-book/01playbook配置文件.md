@@ -289,20 +289,15 @@ TODO
 
 格式统一都是
 
-```yaml
-{{ lookup('lookup_name','params')}}
-```
-
-
+![image-20201102130058398](/root/.config/Typora/typora-user-images/image-20201102130058398.png)
 
 ## file
 
 获取系统的相应文件的内容
 
-```
-- name: add my public key as ec2 key
-  ec2_key: name=mykey key_matrial="{{ lookup('file','/Usr/id_rsa.pub')}}"
-```
+![image-20201102130333898](/root/.config/Typora/typora-user-images/image-20201102130333898.png)
+
+
 
 在playbook中就可以调用key_matrial这个变量获取到对应文件中的密钥信息
 
@@ -310,10 +305,7 @@ TODO
 
 执行一条命令，获取这条命令的结果
 
-```YAML
-- name: get sha of most recent commit
-  debug: msg="{{lookup('pipe','git rev-parse HEAD')}}"
-```
+![image-20201102130441530](/root/.config/Typora/typora-user-images/image-20201102130441530.png)
 
 
 
@@ -321,21 +313,15 @@ TODO
 
 获取到系统变量
 
-```python
-- name: get the current shell
-  debug: msg="{{lookup('env','SHELL')}}"
-```
+![image-20201102130501227](/root/.config/Typora/typora-user-images/image-20201102130501227.png)
+
+
 
 ##  template 
 
-lookup会让你指定一个Jinja2模板文件，然后返回这个模板渲染的结果。
+lookup会让你指定一个Jinja2模板文件，然后返回这个模板渲染的结果.
 
-```yaml
-- name: output messahe from template
-  debug: msg="{{ lookup(\'template\',\'message.j2\') }}"
-```
-
-
+![image-20201102130141975](/root/.config/Typora/typora-user-images/image-20201102130141975.png)\\
 
 ## csvfile 
 
@@ -345,25 +331,17 @@ lookup会让你指定一个Jinja2模板文件，然后返回这个模板渲染�
 
 获取对应dns的ip
 
-```shell
-- name: look up TXT record
-  debug: 
-    msg: ＂{{ lookup('dnstxt','baidu.com')}}"
-```
 
 
+![image-20201102130227181](/root/.config/Typora/typora-user-images/image-20201102130227181.png)
 
 ## redis_kv 
 
-```shell
-- name: look up value in Redis
-  debug: msg=＂{{ lookup( 'redis_kv','redis://localhost:6379,weather') }}"
-
-```
 
 
 
 
+![image-20201102130209463](/root/.config/Typora/typora-user-images/image-20201102130209463.png)
 
 
 

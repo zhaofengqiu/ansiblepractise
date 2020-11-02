@@ -1,45 +1,15 @@
-# ansible newer
+# Your Book Title
 
-- Book
-  - ansible与云计算
-    * [docker与ansible](_book/ansible与云计算/docker与ansible.md)
-    * [ec2与ansible](_book/ansible与云计算/ec2与ansible.md)
-- ansible与云计算
-  * [docker与ansible](ansible与云计算/docker与ansible.md)
-  * [ec2与ansible](ansible与云计算/ec2与ansible.md)
-- ansible优化执行速度
-  * [Ansible的执⾏策略优化](ansible优化执行速度/Ansible的执⾏策略优化.md)
-  * [ssh优化](ansible优化执行速度/ssh优化.md)
-  * [异步](ansible优化执行速度/异步.md)
-- ansible逻辑控制
-  * [01简介](ansible逻辑控制/01简介.md)
-  * [02逻辑控制之循环](ansible逻辑控制/02逻辑控制之循环.md)
-  * [03逻辑控制之判断](ansible逻辑控制/03逻辑控制之判断.md)
-  * [04逻辑运算之tags](ansible逻辑控制/04逻辑运算之tags.md)
-  * [05逻辑运算之handlers](ansible逻辑控制/05逻辑运算之handlers.md)
 - Inventory
   * [01静态文件](inventory/01静态文件.md)
   * [02动态文件](inventory/02动态文件.md)
   * [03资产选择器](inventory/03资产选择器.md)
-- Node Modules
-  - [Gitbook Plugin Chapter Fold](node_modules/gitbook-plugin-chapter-fold/README.md)
-  - [Gitbook Plugin Code](node_modules/gitbook-plugin-code/README.md)
-  - [Gitbook Plugin Expandable Chapters](node_modules/gitbook-plugin-expandable-chapters/README.md)
-  - [Gitbook Plugin Search Pro](node_modules/gitbook-plugin-search-pro/README.md)
-  - [Gitbook Plugin Splitter](node_modules/gitbook-plugin-splitter/README.md)
-  - [Gitbook Plugin Tbfed Pagefooter](node_modules/gitbook-plugin-tbfed-pagefooter/README.md)
-  - [Html Entities](node_modules/html-entities/README.md)
-  - [Moment](node_modules/moment/README.md)
-    * [CHANGELOG](node_modules/moment/CHANGELOG.md)
 - Play Book
+  * [01playbook配置文件](play-book/01playbook配置文件.md)
   * [02loop循环](play-book/02loop循环.md)
   * [03条件语句](play-book/03条件语句.md)
   * [04set_fact变量](play-book/04set_fact变量.md)
   * [05block异常捕获](play-book/05block异常捕获.md)
-- Role
-  * [01role的基本使用](Role/01role的基本使用.md)
-  * [02role文件夹下的子目录介绍](Role/02role文件夹下的子目录介绍.md)
-  * [03使用ansible-galaxy初始化Role](Role/03使用ansible-galaxy初始化Role.md)
 - 变量
   * [01ansible全局变量](变量/01ansible全局变量.md)
   * [02ansible之playbook变量](变量/02ansible之playbook变量.md)
@@ -47,10 +17,12 @@
   * [04ansible之fact变量](变量/04ansible之fact变量.md)
   * [05ansible之register变量](变量/05ansible之register变量.md)
   * [06ansible之变量优先级](变量/06ansible之变量优先级.md)
-- 回调插件
-  * [01回调插件的使用](回调插件/01回调插件的使用.md)
-  * [02日志回调插件源码解析](回调插件/02日志回调插件源码解析.md)
-  * [Ces](回调插件/ces.md)
+- ansible逻辑控制
+  * [01简介](ansible逻辑控制/01简介.md)
+  * [02逻辑控制之循环](ansible逻辑控制/02逻辑控制之循环.md)
+  * [03逻辑控制之判断](ansible逻辑控制/03逻辑控制之判断.md)
+  * [04逻辑运算之tags](ansible逻辑控制/04逻辑运算之tags.md)
+  * [05逻辑运算之handlers](ansible逻辑控制/05逻辑运算之handlers.md)
 - 模块
   * [Commands模块](模块/Commands模块.md)
   * [debug模块](模块/debug模块.md)
@@ -64,6 +36,21 @@
   * [文件模块之文件内容](模块/文件模块之文件内容.md)
   * [系统模块之用户与组](模块/系统模块之用户与组.md)
   * [网络模块之get_url](模块/网络模块之get_url.md)
+- - ansible与云计算
+  * [docker与ansible](ansible与云计算/docker与ansible.md)
+  * [ec2与ansible](ansible与云计算/ec2与ansible.md)
+- ansible优化执行速度
+  * [Ansible的执⾏策略优化](ansible优化执行速度/Ansible的执⾏策略优化.md)
+  * [ssh优化](ansible优化执行速度/ssh优化.md)
+  * [异步](ansible优化执行速度/异步.md)
+- Role
+  * [01role的基本使用](Role/01role的基本使用.md)
+  * [02role文件夹下的子目录介绍](Role/02role文件夹下的子目录介绍.md)
+  * [03使用ansible-galaxy初始化Role](Role/03使用ansible-galaxy初始化Role.md)
+- 回调插件
+  * [01回调插件的使用](回调插件/01回调插件的使用.md)
+  * [02日志回调插件源码解析](回调插件/02日志回调插件源码解析.md)
+  * [Ces](回调插件/ces.md)
 * [ansible核心概念](ansible核心概念.md)
 * [Awx](awx.md)
 * [COLLECTION](COLLECTION.md)
