@@ -1,0 +1,1 @@
+collection 是diy区，类似社区版库，上面有很多collection，而这个collection包括了module、role等。我们可以自己安装到本地，从而不需要等待官方去进行merge再发布新版本，降低了等待时间。

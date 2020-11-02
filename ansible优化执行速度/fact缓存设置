@@ -1,0 +1,67 @@
+默认情况下，Ansible 每次执⾏ playbook 时的第⼀个 Task 就是 获取每台主机的 facts 信息。假如不需要可以设置 gather_facts = no 进⾏关闭，以提⾼执⾏ playbook 的效率。假如想获取 facts 信息，同时⼜想加速这个 task 的效率，就需要 设置 facts 缓存。
+
+## 设置收集情况
+
+通过不通参数可以返回级别不通的fact信息
+
+⾸先是可以在 ansible.cfg ⽂件中设置
+
+```bash
+gathering = smart
+```
+
++ smart --> 表示默认收集facts，但facts已有的情况下不会 收集，也就是会使⽤缓存facts； 
++ implicit --> 表示默认收集facts，要禁⽌收集，必须使⽤ gather_facts: False； 
++ explicit --> 则表示默认不收集，要显式收集，必须使⽤ gather_facts: Ture
+
+## 配置缓存的⽬标
+
+### 缓存到⽂件（JSON格式的数据）
+
+在 ansible.cfg ⽂件中配置缓 存到⼀个普通⽂件中 同时还可指定搜集哪些信息.
+
+⽐如只搜集 network，virtual,还是修改`ansible.cfg `文件
+
+```
+gathering = smart # 表示默认收集facts，但facts已有的情况下不会 收集，也就是会使⽤缓存facts；
+gather_subset = network,virtual # 只搜集 ⽹络信息和虚拟化信息
+fact_caching = jsonfile # 缓存到 json ⽂件
+fact_caching_connection = /dev/shm/ansible_fact_cache# 如果没有这个目录，那么ansibe会自动生成
+fact_caching_timeout = 86400 # 缓存数据时间是⼀天
+```
+
+
+
+### 缓存到redis
+
+在任⼀机器或者ansible 控制主机上部署 Redis 服务
+
+```shell
+ yum install redis
+```
+
+在控制主机 python 的 redis 库
+
+```bash
+ pip install redis
+```
+
+
+
+假如 Redis 服务不在 ansible 控制主机上，还应该设置 redis 监听地址,修改redis绑定地址
+
+`/etc/redis.conf`
+
+```bash
+bind 0.0.0.0
+```
+
+在 ansible.cfg ⽂件中配置缓存到 redis
+
+```ini
+gathering = smart
+fact_caching = redis # 缓存到 redis
+fact_caching_connection = 192.168.1.37:6379:0
+fact_caching_timeout = 86400 # 缓存数据时间是⼀天
+```
+
