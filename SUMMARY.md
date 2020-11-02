@@ -40,7 +40,7 @@
   * [文件模块之文件内容](模块/文件模块之文件内容.md)
   * [系统模块之用户与组](模块/系统模块之用户与组.md)
   * [网络模块之get_url](模块/网络模块之get_url.md)
-- - ansible与云计算
+- ansible与云计算
   * [docker与ansible](ansible与云计算/docker与ansible.md)
   * [ec2与ansible](ansible与云计算/ec2与ansible.md)
 - 回调插件
